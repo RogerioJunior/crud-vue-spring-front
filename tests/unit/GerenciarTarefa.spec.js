@@ -27,8 +27,22 @@ describe('Gerenciar Tarefa', () => {
   test(' Componente é uma instancia do Vue', () => {
     const wrapper = shallowMount(GerenciarTarefa);
     expect(wrapper.isVueInstance()).toBeTruthy()
-  })
+  });
+
+
+  test('renders props.msg when passed', () => {
+      const msg = "Adicionar Tarefa Nome  Descrição  Nota  Salvar  Cancelar";
+      const wrapper = shallowMount(GerenciarTarefa, {
+        propsData: { msg }
+      });
+      expect(wrapper.text()).toMatch(msg)
+    });
+
+
+
 });
+
+
 
 
 // npm t -- --watch ( roda apenas o teste que foi alterado, criado em um commit)

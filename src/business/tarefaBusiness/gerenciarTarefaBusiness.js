@@ -2,7 +2,7 @@ import api from '../../commons/api';
 
 export default {
 
-    async getAllTarefas () {
+    async getAllTarefas() {
         return await api.getAll().then(response => {
             return response.data
 
@@ -13,15 +13,15 @@ export default {
 
     },
 
-    async excluirTarefa (idtarefa) {
+    async excluirTarefa(idtarefa) {
         return api.removeForId(idtarefa);
     },
 
-    async salvarTarefa (dto){
+    async salvarTarefa(dto) {
         return api.createNew(dto);
     },
 
-    async editarTarefa (idTarefa, dto){
+    async editarTarefa(idTarefa, dto) {
         return api.updateForId(idTarefa, dto)
     }
 
