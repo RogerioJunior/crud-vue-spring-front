@@ -71,7 +71,7 @@
                 <input type="number" class="form-control" id="nota" v-model="form.nota"/>
             </div>
             <div class="form-group gerenciar">
-                <button type="submit" style="margin-right: 15px" class="btn btn-primary" @click="salvar()">Salvar</button>
+                <button type="submit" class="btn btn-primary" @click="salvar()">Salvar</button>
 
                 <router-link :to="{name: 'Principal'}">
                     <!-- <router-link to="/">-->
