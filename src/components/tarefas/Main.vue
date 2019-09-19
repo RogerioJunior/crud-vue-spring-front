@@ -1,40 +1,3 @@
-<script>
-    import gerenciarTarefaBusiness from "../../business/tarefaBusiness/gerenciarTarefaBusiness";
-
-    export default {
-
-        components: {
-
-        },
-
-        data () {
-            return {
-                tarefas: []
-            }
-
-        },
-
-        mounted() {
-            this.load();
-        },
-
-        methods: {
-
-            async excluirTarefa (idtarefa) {
-                await gerenciarTarefaBusiness.excluirTarefa(idtarefa);
-                this.load();
-
-            },
-
-            async load () {
-                this.tarefas = await gerenciarTarefaBusiness.getAllTarefas();
-            },
-
-        }
-
-    }
-</script>
-
 <template>
 
     <div>
@@ -76,8 +39,59 @@
             </tr>
             </tbody>
         </table>
+
+        <span>
+        <cool-card></cool-card>
+        </span>
+
+        <div>
+            <div v-for="(thing, index) in Array(2)" :key="index">
+                <div data-test="fake-table-row">teste</div>
+            </div>
+        </div>
+
     </div>
 
 </template>
+
+
+<script>
+    import gerenciarTarefaBusiness from "../../business/tarefaBusiness/gerenciarTarefaBusiness";
+    import CoolCard from "../shared/CoolCard";
+
+    export default {
+
+        components: {
+            CoolCard
+        },
+
+        data () {
+            return {
+                tarefas: []
+            }
+
+        },
+
+        mounted() {
+            this.load();
+        },
+
+        methods: {
+
+            async excluirTarefa (idtarefa) {
+                await gerenciarTarefaBusiness.excluirTarefa(idtarefa);
+                this.load();
+
+            },
+
+            async load () {
+                this.tarefas = await gerenciarTarefaBusiness.getAllTarefas();
+            },
+
+        }
+
+    }
+</script>
+
 
 <style lang="scss" src="../../css/tarefas.scss"></style>

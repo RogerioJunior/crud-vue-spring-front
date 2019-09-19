@@ -38,6 +38,10 @@ describe('Gerenciar Tarefa', () => {
       expect(wrapper.text()).toMatch(msg)
     });
 
+  test('should mount for testing', () => {
+      expect(1).toEqual(1);
+  });
+
 
 
 });
