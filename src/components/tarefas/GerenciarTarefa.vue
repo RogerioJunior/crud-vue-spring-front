@@ -3,7 +3,7 @@
     import router from '../../router'
 
     export default {
-
+        title: 'Gerenciar Tarefa',
         components: {
 
         },

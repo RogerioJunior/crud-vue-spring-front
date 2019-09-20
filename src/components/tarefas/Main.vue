@@ -60,7 +60,7 @@
     import CoolCard from "../shared/CoolCard";
 
     export default {
-
+        title: "Principal",
         components: {
             CoolCard
         },
