@@ -3,7 +3,9 @@
     import router from '../../router'
 
     export default {
-        title: 'Gerenciar Tarefa',
+        title () {
+            return this.tarefaDto ? "Editar Tarefa" : "Adicionar Tarefa";
+        },
         components: {
 
         },
