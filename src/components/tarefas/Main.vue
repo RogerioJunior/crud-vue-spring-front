@@ -41,7 +41,7 @@
         </table>
 
         <span>
-        <cool-card></cool-card>
+        <cool-card :user=user />
         </span>
 
         <div>
@@ -67,7 +67,10 @@
 
         data () {
             return {
-                tarefas: []
+                tarefas: [],
+                user: {
+                    nome: ''
+                }
             }
 
         },

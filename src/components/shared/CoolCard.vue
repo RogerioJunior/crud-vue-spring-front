@@ -6,7 +6,14 @@
 
 <script>
     export default {
-        name: "CoolCard"
+        name: "CoolCard",
+        props: {
+            user: {
+                type: Object,
+                required: true,
+                default: () => ({})
+            }
+        }
     }
 </script>
 

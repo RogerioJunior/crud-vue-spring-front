@@ -42,6 +42,17 @@ describe('Gerenciar Tarefa', () => {
       expect(1).toEqual(1);
   });
 
+  //O jest tirou uma “foto” do htm do nosso componente, se vermos nos diretórios, foi criada uma pasta __snapshots__
+    // dentro de tests. Agora temos uma referência do nosso componente, e caso tenha qualquer tipo de alteração no
+    // html dele, o nosso teste irá falhar.
+  //Caso tenha alguma alteração no nosso html, precisaremos corrigir o erro, ou voltar ao estado original.
+    // caso a alteração seja intencional, podemos atualizar a snapshot, dizendo que esta versão será a nossa nova referência.
+    //para fazer isto, basta apertar u no terminal, e automaticamente a snapshot será atualizada. Para ver mais opções,
+    // basta apertar w no terminal, que irá ser trazida uma listagem de opções do jest.
+  test('componente está renderizando', () => {
+      expect(wrapper.html()).toMatchSnapshot()
+  })
+
 
 
 });

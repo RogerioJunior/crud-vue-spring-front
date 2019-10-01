@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gerenciar Tarefa componente está renderizando 1`] = `
+<div>
+  <h2>Adicionar Tarefa</h2>
+  <form>
+    <div class="form-group"><label for="nome">Nome</label> <input id="nome" required="required" class="form-control"></div>
+    <div class="form-group"><label for="descricao">Descrição</label> <textarea id="descricao" rows="5" class="form-control"></textarea></div>
+    <div class="form-group"><label for="nota">Nota</label> <input type="number" id="nota" class="form-control"></div>
+    <div class="form-group gerenciar"><button type="submit" class="btn btn-primary">Salvar</button>
+      <router-link-stub to="[object Object]" tag="a" event="click"><button type="button" class="btn btn-default"> Cancelar</button></router-link-stub>
+    </div>
+  </form>
+</div>
+`;

@@ -11,7 +11,7 @@ describe('Cool Card', () => {
     let wrapper;
 
     beforeAll(() => {
-        wrapper = shallowMount(CoolCard);
+        wrapper = shallowMount(CoolCard,);
     });
 
 
