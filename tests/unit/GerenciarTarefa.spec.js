@@ -51,7 +51,15 @@ describe('Gerenciar Tarefa', () => {
     // basta apertar w no terminal, que irá ser trazida uma listagem de opções do jest.
   test('componente está renderizando', () => {
       expect(wrapper.html()).toMatchSnapshot()
-  })
+  });
+
+  test('tem classe form-control', () => {
+        expect(wrapper.contains('.form-control')).toBe(true);
+  });
+
+  test('tem n classes form-control', () => {
+        expect(wrapper.findAll('.form-control').length).toBe(3);
+  });
 
 
 

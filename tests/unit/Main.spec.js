@@ -46,7 +46,7 @@ describe('Cool Card', () => {
         expect(coolCard().exists()).toBe(true);
     });
 
-    test('deve validar o bind do componente, esta passando uma propriedade para o componente coolCard' +
+    test('deve validar o bind do componente, se esta passando uma propriedade para o componente coolCard' +
         ' contendo um objeto, e esse objeto terá todas as informações', () => {
 
         const { wrapper, coolCard } = build();
